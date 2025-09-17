@@ -16,3 +16,44 @@ p {
     margin-left: 100px;
     color: rgb(27, 161, 223);
 }
+
+/* Stilizarea containerului principal pentru numere */
+.lista-numere {
+    display: grid; /* Cel mai important: transformă lista într-o grilă */
+    grid-template-columns: repeat(7, 1fr); /* Creează 7 coloane egale (7x7 = 49) */
+    gap: 8px; /* Spațiu între pătrățelele cu numere */
+    
+    /* Resetări pentru a arăta ca o grilă, nu ca o listă */
+    list-style-type: none; 
+    padding: 0;
+    margin-top: 20px; /* Un pic de spațiu sub butoane */
+    max-width: 400px; /* O lățime maximă pentru grilă */
+}
+
+/* Stilizarea fiecărui număr în parte */
+.lista-numere li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Colțuri rotunjite */
+    background-color: #f9f9f9;
+    text-align: center; /* Centrează numărul */
+    font-size: 1.1em;
+    font-family: sans-serif;
+    cursor: pointer; /* Arată că numărul este selectabil */
+    transition: background-color 0.2s, transform 0.2s; /* Efecte subtile */
+}
+
+/* Efect vizual când treci cu mouse-ul peste un număr */
+.lista-numere li:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1); /* Mărește puțin numărul */
+}
+
+/* Adaugă acest cod nou la finalul fișierului CSS */
+
+.pick-number.activ {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: scale(1.1);
+}
