@@ -1,0 +1,52 @@
+button {
+    color: white;
+    background-color: green;
+    font-weight: bold;
+    border-color: transparent;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 100px;
+    color: rgb(27, 161, 223);
+}
+
+.lista-numere {
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px; 
+    list-style-type: none; 
+    padding: 0;
+    margin-top: 20px; 
+    max-width: 400px; 
+}
+
+.lista-numere li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background-color: #f9f9f9;
+    text-align: center; 
+    font-size: 1.1em;
+    font-family: sans-serif;
+    cursor: pointer; 
+    transition: background-color 0.2s, transform 0.2s; 
+}
+
+.lista-numere li:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1); 
+}
+
+.pick-number.activ {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    transform: scale(1.1);
+}
