@@ -20,23 +20,22 @@ butoane.forEach(buton => {
 lista.addEventListener('click', (event) => { 
     const elementulApasat = event.target.closest('li'); 
     if (elementulApasat && butonActiv) { 
-        const numar = elementulApasat.textContent; 
-        butonActiv.textContent = numar; 
+        const numberPressed = elementulApasat.textContent; 
+        butonActiv.textContent = numberPressed; 
         butonActiv.classList.remove('activ');
         butonActiv = null; 
         lista.innerHTML = ''; 
 
         
-        //let winningNUmber = Math.floor(Math.random() * 49) +1 ;
-        let winningNUmber = 2 ;
-       
+        let winningNUmber = Math.floor(Math.random() * 49) +1 ;
+        
         let resultGame = '';
-        if(winningNUmber === numar.textContent){
+        if(winningNUmber === +numberPressed){
           resultGame = 'win';
-        } else if (winningNUmber !== numar.innerHTML) {
+        } else if (winningNUmber !== numberPressed.innerHTML) {
           resultGame = 'Lose'
         }
-        alert(`You picked ${numar} and the winning number is ${winningNUmber}, so you ${resultGame}`);
+        alert(`You picked ${numberPressed} and the winning number is ${winningNUmber}, so you ${resultGame}`);
        
     }
 
